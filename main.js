@@ -36,6 +36,7 @@ function encriptarMsn() {
         }
    console.log(nuevaPalabra);
    msn.value = nuevaPalabra;
+   msn.style.backgroundImage = 'none';
 }
 function copyClipboard(){
     const texto= document.getElementById('msnout');
@@ -59,6 +60,7 @@ function desencritarMsn(){
     const descod=sino.replace(/ufat/g,'u');
     console.log(descod);
     msn.value = descod;
+    msn.style.backgroundImage = 'none';
 }
 //let mensaje= document.getElementById('msj');
 
