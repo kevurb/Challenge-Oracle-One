@@ -1,19 +1,14 @@
 
 
-function encriptarInfo(){
-    const mensaje= document.getElementById('msj');
-    const mennin= mensaje.value.toLowerCase();
-    //console.log(mennin.toLowerCase());
-    
-    console.log(reemplazarLetra());
-};
 
-function reemplazarLetra() {
+
+function encriptarMsn() {
     const mensaje= document.getElementById('msj');
     const palabra= mensaje.value;
     palabra.toLowerCase();
-    console.log(palabra.length);
+    //console.log(palabra.length);
     let nuevaPalabra = "";
+    const msn=document.getElementById('msnout');
     
     
     for (let i = 0; i < palabra.length; i++) {
@@ -40,7 +35,31 @@ function reemplazarLetra() {
         }
         }
    console.log(nuevaPalabra);
-  }
+   msn.value = nuevaPalabra;
+}
+function copyClipboard(){
+    const texto= document.getElementById('msnout');
+    const msntocopy = texto.value;
+    console.log(msntocopy);
+    navigator.clipboard.writeText(msntocopy);
 
+
+}
+
+function desencritarMsn(){
+    const mensaje= document.getElementById('msj');
+    const palabra= mensaje.value;
+    console.log('lapalabra es:',palabra);
+    
+    const msn = document.getElementById('msnout');
+    const nue= palabra.replace(/ai/g,"a");
+    const sine=nue.replace(/enter/g,'e');
+    const sini=sine.replace(/imes/g,'i');
+    const sino=sini.replace(/ober/g,'o');
+    const descod=sino.replace(/ufat/g,'u');
+    console.log(descod);
+    msn.value = descod;
+}
 //let mensaje= document.getElementById('msj');
-console.log(reemplazarLetra());
+
+//console.log(reemplazarLetra());
